@@ -1,0 +1,179 @@
+.article-grid-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 10px;
+}
+
+.article-grid-colspan12{
+    grid-column: span 12;
+}   
+
+.article-grid-colspan10{
+    grid-column: span 10;
+}
+
+#article-header{
+    order:2;
+}
+
+#article-image{
+    order:1;
+}
+
+#article-body{
+    order:3;
+}
+
+#article-comments-section{
+    order:4;
+}
+
+#artilce-more-stories{
+    order:5;
+}
+
+.sidebar{
+    width:100%;
+}
+
+#article-image img{
+    width:100%;
+}
+
+@media only screen and (min-width : 768px) {
+    .article-grid-col-3-10{
+        grid-column: 3/10;
+    }
+
+    .article-grid-col-1-9{
+        grid-column: 1/9;
+    }
+
+    .article-grid-col-3-9{
+        grid-column: 3/9;
+    }
+
+    .article-grid-col-10-13{
+        grid-column: 10/13;
+    } 
+    
+    #article-header{
+        order:1;
+    }
+
+    #article-image{
+        order:2;
+    }
+
+    #article-body{
+        order:4;
+    }
+
+    #article-comments-section{
+        order:5;
+    }
+    
+    #artilce-more-stories{
+        order:3;
+        position: absolute;
+        top: 30%;
+        left: 70%;
+    }
+    
+    .sidebar{
+        width:90%;
+    }
+    
+}
+
+@media only screen and (min-width: 992px){
+    #artilce-more-stories{
+        position: absolute;
+        top: 50%;
+        left: 80%;
+    }
+}
+
+.divider{
+    margin-bottom: 10px;
+    border-bottom: 1px solid #202020;
+    margin-top: 10px;
+}
+
+#comments-count{
+    padding-left: 25px;
+    position: relative;
+    line-height: 1em;
+}
+
+.overflow-auto{
+    overflow: auto;
+}
+
+.float-right{
+    float: right;
+}
+
+.float-left{
+    float: left;
+}
+
+.font-bold{
+    font-weight: bold;
+}
+
+.sorting a{
+    color:inherit;
+    cursor: pointer;
+}
+
+.sorting a:hover{
+    color:inherit;
+}
+
+#comments-count:before{
+    background: url("https://i.ibb.co/bb5B1w0/comment.png") no-repeat 50% 50%;
+    background-size: 14px;
+    content: "";
+    height: 14px;
+    left: 0;
+    position: absolute;
+    width: 14px;
+}
+
+.comment-time{
+    padding-left: 10px;
+    color:darkgrey;
+}
+
+.comment-text{
+    padding-top: 10px;
+}
+
+#article-header p{
+    font-size: 13px;
+    color: dimgrey;
+}
+
+#article-header time{
+    font-size: 12px;
+    color: lightslategrey;
+}
+
+.aside{
+    display: inline-block;
+}
+
+.story-thumbnail img{
+    width:60px;
+    height:50px;
+}
+
+.story-data label{
+    font-size: 12px;
+}
+
+.articleWrapper{
+    grid-column: 3/10;
+}
