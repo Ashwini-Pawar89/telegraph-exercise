@@ -1,0 +1,82 @@
+
+<div class="container-fluid">
+<article class="article-grid-container">
+    <header id="article-header" class="article-grid-col-3-10 article-grid-colspan12">
+        <div>
+            <h1>{{{ article.post.title }}}</h1>
+            <p>{{{ article.post.standfirst }}}</p>
+            <div>
+            <time>{{{ articleDate }}}</time>
+            </div>
+        </div>
+    </header>
+    <div id="article-image" class="article-grid-col-1-9 article-grid-colspan12">
+        <figure>
+          <img src="https://i.ibb.co/WDYPp8t/image.jpg" alt="Article Image">
+        </figure>
+    </div>
+    
+    <div id="article-body" class="article-grid-col-3-9 article-body article-grid-colspan12">
+        {{{ article.post.body }}}
+    </div>
+    <div id="article-comments-section" class="article-grid-col-3-9 article-grid-colspan12">
+        <div class="divider"></div>
+        <div class="comments-header overflow-auto">
+            <div id="comments-count" class="float-left"><span class="font-bold"></span></div>
+            <div class="sorting float-right">
+                <span>Sort:</span>
+                <a onclick="ui.Article.sortbyLikes()">Likes</a>
+                <span>|</span>
+                <a onclick="ui.Article.sortbyTime()">Newest</a>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div id="comment-wrapper"></div> 
+    </div>
+    
+    <aside id="artilce-more-stories" class="article-grid-col-10-13 article-grid-colspan12">
+        <div class="sidebar">
+        <div><span class="font-bold">More Stories</span></div>
+        <div class="divider"></div>
+        <div id="more-stories-wrapper">
+            <div>
+                {{#each posts}}
+                <article class="article-grid-container">
+                <div class="story-thumbnail">
+                        <figure>
+                            <img src="https://i.ibb.co/WDYPp8t/image.jpg" alt="Story Figure">
+                        </figure>    
+                    </div>
+                    <div class="story-data article-grid-colspan10">
+                        <label class="font-bold">{{this.title}}</label>
+                        <a href="#">Read more</a>
+                    </div>
+                </article>
+                <div class="divider"></div>
+                {{/each}}
+            </div>
+        </div>    
+        </div>
+    </aside>
+    
+    <template id="template-comment">
+      <div class="comment">
+            <header>
+                <div class="overflow-auto">
+                    <div class="float-left">
+                        <span class="font-bold comment-name"></span>
+                        <time class="comment-time"></time>
+                    </div>
+                    <div class="float-right">
+                        <span class="comment-likes"></span>
+                    </div>
+                </div>
+            </header>
+            <section class="comment-text"></section>
+            <div class="divider"></div>
+        </div>
+    </template>
+    
+</article>
+    
+</div>
